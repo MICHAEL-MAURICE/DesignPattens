@@ -1,4 +1,6 @@
 ﻿using Design_Patterns.Singleton;
+using DesignPattens.observable.NotificationSystem.EnhanceSolution;
+using DesignPattens.observable.NotificationSystem.TopOfMind;
 using Strategy_pattern.Mediator;
 using Strategy_pattern.Strategy_Pattern;
 using System.ComponentModel.DataAnnotations;
@@ -66,6 +68,37 @@ using System.ComponentModel.DataAnnotations;
 
 
 #endregion
+
+
+#region Obswevable
+
+//TopOfMind 
+
+//OnlineMarketPlace onlineMarketPlace=new OnlineMarketPlace();
+//onlineMarketPlace.addUser(new User("Mohsen", true, true));
+//onlineMarketPlace.addUser(new User("a", false, false));
+//onlineMarketPlace.addUser(new User("b", true, false));
+//onlineMarketPlace.addUser(new User("c", false, true));
+
+//onlineMarketPlace.addProudect(new Proudect("Pro1", 200));
+//onlineMarketPlace.addOffer(new Offer("This Is New Offer"));
+
+
+
+//Enhance Solution
+OnlineMarketPlace2 onlineMarketPlace= new OnlineMarketPlace2();
+ISubscriper A = new Customer("A");
+ISubscriper b = new Customer("b");
+ISubscriper c = new Customer("c");
+ISubscriper d = new Customer("d");
+onlineMarketPlace.Subscripe(EventTypes.New_Proudect, A);
+onlineMarketPlace.Subscripe(EventTypes.Opening_Job, A);
+onlineMarketPlace.Subscripe(EventTypes.New_Proudect, b);
+onlineMarketPlace.Subscripe(EventTypes.Opening_Job, c);
+onlineMarketPlace.addProudect(new Proudect2("Pro1", 200));
+onlineMarketPlace.addOffer(new Offer2("This Is New Offer"));
+#endregion
+
 #endregion
 
 
