@@ -92,9 +92,9 @@ ISubscriper b = new Customer("b");
 ISubscriper c = new Customer("c");
 ISubscriper d = new Customer("d");
 onlineMarketPlace.Subscripe(EventTypes.New_Proudect, A);
-onlineMarketPlace.Subscripe(EventTypes.Opening_Job, A);
+onlineMarketPlace.Subscripe(EventTypes.New_Offer, A);
 onlineMarketPlace.Subscripe(EventTypes.New_Proudect, b);
-onlineMarketPlace.Subscripe(EventTypes.Opening_Job, c);
+onlineMarketPlace.Subscripe(EventTypes.New_Offer, b);
 onlineMarketPlace.addProudect(new Proudect2("Pro1", 200));
 onlineMarketPlace.addOffer(new Offer2("This Is New Offer"));
 #endregion
